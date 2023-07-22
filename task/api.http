@@ -1,0 +1,27 @@
+### FindAll
+GET http://localhost:8081/tasks HTTP/1.1
+
+### FindOneByTitle
+GET http://localhost:8081/tasks/Task 2 HTTP/1.1
+
+### Create
+POST http://localhost:8081/tasks HTTP/1.1
+Content-Type: application/json
+
+{
+    "title": "Task 2",
+    "description": "Lorem Inspum...."
+}
+
+### Update
+PUT http://localhost:8081/tasks/64bc4b0b3753e1451cf90eda HTTP/1.1
+Content-Type: application/json
+
+{
+    "title": "Task 44",
+    "description": "Lorem Inspumdassad....",
+    "isDone": false
+}
+
+### Remove
+DELETE http://localhost:8081/tasks/64bc45743753e1451cf90ec1 HTTP/1.1

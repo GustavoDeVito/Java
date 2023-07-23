@@ -1,0 +1,22 @@
+version: '3.1'
+
+networks:
+  - database
+
+services:
+  api:
+    container_name: api
+    build: .
+    ports:
+      - 8081:8081
+    networks:
+      - database
+
+  postgres:
+    container_name: postgres
+    image: postgres
+    environment:
+      - "POSTGRES_USER=root"
+      - "POSTGRES_PASSWORD=test"
+    networks:
+      - database

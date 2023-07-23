@@ -1,0 +1,28 @@
+### FindAll
+GET http://localhost:8081/users HTTP/1.1
+
+### FindOne
+GET http://localhost:8081/users/2 HTTP/1.1
+
+### Create
+POST http://localhost:8081/users HTTP/1.1
+Content-Type: application/json
+
+{
+    "name": "Tester",
+    "username": "tst",
+    "password": "pass",
+    "age": 18
+}
+
+### Update
+PATCH http://localhost:8081/users/52 HTTP/1.1
+Content-Type: application/json
+
+{
+    "password": "dsaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+    "isActive": false
+}
+
+### Remove
+DELETE http://localhost:8081/users/52 HTTP/1.1

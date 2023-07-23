@@ -1,7 +1,7 @@
 version: '3.1'
 
 networks:
-  - database
+  database:
 
 services:
   api:
@@ -11,9 +11,10 @@ services:
       - 8081:8081
     networks:
       - database
+    depends_on:
+      - postgres
 
   postgres:
-    container_name: postgres
     image: postgres
     environment:
       - "POSTGRES_USER=root"

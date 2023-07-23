@@ -11,18 +11,18 @@ Content-Type: application/json
 {
     "name": "Tester",
     "username": "tst",
-    "password": "pass",
+    "password": "Password123@",
     "age": 18
 }
 
 ### Update
-PATCH http://localhost:8081/users/52 HTTP/1.1
+PATCH http://localhost:8081/users/102 HTTP/1.1
 Content-Type: application/json
 
 {
-    "password": "dsaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+    "password": "Password1234@",
     "isActive": false
 }
 
 ### Remove
-DELETE http://localhost:8081/users/52 HTTP/1.1
+DELETE http://localhost:8081/users/102 HTTP/1.1

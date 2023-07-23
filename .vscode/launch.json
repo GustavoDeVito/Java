@@ -9,6 +9,16 @@
             "projectName": "task",
             "args": "",
             "envFile": "${workspaceFolder}/.env"
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-PostApplication<post>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "br.com.java.post.PostApplication",
+            "projectName": "post",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
         }
     ]
 }

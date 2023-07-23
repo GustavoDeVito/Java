@@ -8,6 +8,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 import org.springframework.web.server.ResponseStatusException;
 
+import br.com.java.post.helper.MessageHelper;
 import br.com.java.post.model.User;
 import br.com.java.post.repository.UserRepository;
 
@@ -27,7 +28,7 @@ public class UserServiceImpl implements UserService {
         Optional<User> user = this.userRepository.findById(id);
 
         if (user.isEmpty()) {
-            throw new ResponseStatusException(HttpStatus.NOT_FOUND);
+            throw new ResponseStatusException(HttpStatus.NOT_FOUND, MessageHelper.getUserNotFound());
         }
 
         return user;
@@ -49,7 +50,7 @@ public class UserServiceImpl implements UserService {
         Optional<User> user = this.userRepository.findById(id);
 
         if (user.isEmpty()) {
-            throw new ResponseStatusException(HttpStatus.NOT_FOUND);
+            throw new ResponseStatusException(HttpStatus.NOT_FOUND, MessageHelper.getUserNotFound());
         }
 
         if (userDto.getIsActive() != null) {
@@ -68,7 +69,7 @@ public class UserServiceImpl implements UserService {
         Optional<User> existUser = this.userRepository.findById(id);
 
         if (existUser.isEmpty()) {
-            throw new ResponseStatusException(HttpStatus.NOT_FOUND);
+            throw new ResponseStatusException(HttpStatus.NOT_FOUND, MessageHelper.getUserNotFound());
         }
 
         this.userRepository.deleteById(id);

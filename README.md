@@ -8,9 +8,23 @@
 - [ ] Create test - API Task
 - [ ] Create test - API Post
 - [x] SonarLint - VS Code
-- [ ] SonarQube - Docker
+- [x] SonarQube - Docker
 
 ### Test
 - TDD
 - BDD
 - [Postman - Newman](https://br.sensedia.com/post/rest-api-entenda-o-passo-a-passo-para-realizar-testes)
+
+
+### SonarQube
+
+```bash
+# https://www.devstringx.com/integrate-the-sonarqube-with-spring-boot
+
+# Command Example|:
+mvn clean verify sonar:sonar \
+  -Dsonar.projectKey=projectKey \
+  -Dsonar.projectName='projectName' \
+  -Dsonar.host.url=http://localhost:9000 \
+  -Dsonar.token=token
+```
